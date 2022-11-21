@@ -35,9 +35,9 @@ while running:
     rect.x = x
     rect.y = y
     if rect.left < 0 or rect.right > WIDTH:
-        x_vel *= -1
+        x_vel = -x_vel
     if rect.top < 0 or rect.bottom > HEIGHT:
-        y_vel *= -1
+        y_vel = -y_vel
 
     screen.fill((0, 0, 0))
     screen.blit(dvd, (x, y))

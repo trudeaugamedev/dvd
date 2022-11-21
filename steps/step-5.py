@@ -35,11 +35,11 @@ while running:
     # If the left of the rect is crossing the left border of the window
     # or if the right of the rect is crossing the right border of the window
     if rect.left < 0 or rect.right > WIDTH:
-        x_vel *= -1 # Reverse the x velocity
+        x_vel = -x_vel # Reverse the x velocity
     # If the top of the rect is crossing the top border of the window
     # or if the bottom of the rect is crossing the bottom border of the window
     if rect.top < 0 or rect.bottom > HEIGHT:
-        y_vel *= -1 # Reverse the y velocity
+        y_vel = -y_vel # Reverse the y velocity
 
     screen.fill((0, 0, 0))
     screen.blit(dvd, (x, y))

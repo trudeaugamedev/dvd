@@ -36,9 +36,9 @@ while running:                                      # Main game loop, everything
     rect.x = x                                      # Set the x position of the rect to match the x variable
     rect.y = y                                      # Set the y position of the rect to match the y variable
     if rect.left < 0 or rect.right > WIDTH:         # If the left or right side of the rect is outside the window
-        x_vel *= -1                                 # Reverse the x velocity
+        x_vel = -x_vel                              # Reverse the x velocity
     if rect.top < 0 or rect.bottom > HEIGHT:        # If the top or bottom side of the rect is outside the window
-        y_vel *= -1                                 # Reverse the y velocity
+        y_vel = -y_vel                              # Reverse the y velocity
 
     screen.fill((0, 0, 0))                          # Fill the screen with black (0, 0, 0)
     screen.blit(dvd, (x, y))                        # Draw the image at position (x, y)
